@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/HomeStyle.css">
+    <script defer src="js/FetchUsername.js"></script> <!-- Script to fetch username -->
+</head>
+
+<body style="background-color: rgba(110, 105, 105, 0.37); background-image:url(images/temp.webp);">
+    <!-- Welcome Section -->
+    <header class="welcome-section">
+        <h1 id="welcome-text">Welcome! Username</h1>
+    </header>
+
+    <!-- Cards Section -->
+    <div class="cards-container">
+        <!-- Card 1: Find Gym -->
+        <div class="card" onclick="location.href='gymList.html'">
+            <h2>Find Gym</h2>
+            <p>Explore nearby gyms.</p>
+        </div>
+
+        <!-- Card 2: Food -->
+        <div class="card" onclick="location.href='food.html'">
+            <h2>Food</h2>
+            <p>Find healthy food providers.</p>
+        </div>
+
+        <!-- Card 3: Private Trainer -->
+        <div class="card" onclick="location.href='PrivateTrainer.html'">
+            <h2>Private Trainer</h2>
+            <p>Get help from expert trainers.</p>
+        </div>
+
+        <!-- Card 4: Workout Plan -->
+        <div class="card" onclick="location.href='MyFitnessPG.html'">
+            <h2>Workout Plan</h2>
+            <p>Create or follow a fitness plan.</p>
+        </div>
+    </div>
+</body>
+
+</html>

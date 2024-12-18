@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindMyGym</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/searchGymListStyle.css">
+    <script defer src="js/Scripts.js"></script>
+    <script defer src="js/fetchGyms.js"></script>
+</head>
+
+<body style="background-color: rgb(252, 252, 252);">
+    <!-- //background-color -->
+
+    <!-- Top navigation bar -->
+    <header class="top-nav">
+
+        <a href="Home.html"> <!-- home.html -->
+            <nav style="height: 38px; position:fixed; left: 5%;top: 0.1%;">
+                <img src="images/logo.png" alt="HomeLogo" style="height: 50px;">
+            </nav>
+        </a>
+
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button> <!-- Sidebar toggle button -->
+
+
+        <nav class="top-nav-links">
+            <a href="#" onclick="handleLogout()">Logout</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar navigation -->
+        <aside class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="MyFitnessPG.html">Workouts</a></li>
+                <li><a href="gymList.html">Gyms</a></li>
+                <li><a href="food.html">Food</a></li>
+                <li><a href="PrivateTrainer.html">Private Trainer</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main content area -->
+
+        <main class="content">
+            <h1>Find Your Gym</h1>
+
+            <!-- Search and Filter Section -->
+            <div class="search-filter">
+                <!-- Search Input -->
+                <input type="text" id="searchInput" placeholder="Search gyms..." />
+                <button id="searchButton" onclick="applyFilters()">Search</button>
+
+                <!-- Filter Dropdown -->
+                <select id="filterOptions" onchange="applyFilters()">
+                    <option value="all">All</option>
+                    <option value="morning">Open Before Noon</option>
+                    <option value="evening">Open After 6 PM</option>
+                </select>
+            </div>
+
+            <!-- Gym List -->
+            <div class="gym-list" id="gymList">
+                <!-- Gym items will be dynamically inserted here -->
+            </div>
+
+            <!-- Review Section -->
+            <div id="reviewSection" class="review-section" style="display: none;">
+                <h2>More Info</h2>
+                <div id="reviewsContent"></div>
+                <button onclick="closeReviewSection()">Close</button>
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+</body>
+
+</html>

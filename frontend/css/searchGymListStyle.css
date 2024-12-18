@@ -1,0 +1,211 @@
+/* Basic reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+/* Top navigation bar */
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.top-nav .toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    left: 1%;
+    /* top: 0.1%; */
+}
+
+
+.top-nav-links {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    right: 2%;
+}
+
+.top-nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.top-nav-links a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 0;
+    overflow: hidden;
+    background-color: #333;
+    padding-top: 50px;
+    /* Offset for top-nav */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    transition: width 0.3s ease;
+}
+
+.sidebar.expanded {
+    width: 250px;
+    /* Width when expanded */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Main content */
+.content {
+    margin-top: 60px;
+    /* Offset for top-nav */
+    padding: 20px;
+    margin-left: 0;
+    /* Adjust based on sidebar width */
+    flex: 1;
+    transition: margin-left 0.3s ease;
+}
+
+.gym-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gym-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.gym-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+
+/* Search and Filter Section */
+.search-filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.search-filter input {
+    width: 200px;
+    /* Make input smaller */
+    padding: 8px;
+    /* Adjust padding for compactness */
+    font-size: 14px;
+    /* Smaller font size */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search-filter button {
+    padding: 8px 15px;
+    /* Compact padding */
+    font-size: 14px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-filter button:hover {
+    background-color: #555;
+}
+
+.search-filter select {
+    padding: 8px;
+    /* Compact padding */
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Reviews Section */
+.review-section {
+    display: none; /* hide */
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    z-index: 1000;
+}
+
+.review-section h2 {
+    margin-top: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.review-section div {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.review-section button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+.review-section button:hover {
+    background-color: #555;
+}

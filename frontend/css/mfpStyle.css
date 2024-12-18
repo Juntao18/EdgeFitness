@@ -1,0 +1,222 @@
+  /* This is the background */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  /*  */
+  .top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    /* color: white; */
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .top-nav .toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    left: 1%;
+    /* top: 0.1%; */
+  }
+
+
+  .top-nav-links {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    right: 2%;
+  }
+
+  .top-nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+  }
+
+  .top-nav-links a:hover {
+    background-color: #555;
+    border-radius: 4px;
+  }
+
+  /* Sidebar styles */
+  .sidebar {
+    width: 0;
+    overflow: hidden;
+    background-color: #333;
+    padding-top: 50px;
+    /* Offset for top-nav */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    /*layer number for displaying the element the lower the more visable*/
+    transition: width 0.3s ease;
+  }
+
+  .sidebar.expanded {
+    width: 250px;
+    /* Width when expanded */
+  }
+
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar ul li {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+  }
+
+  .sidebar ul li a:hover {
+    background-color: #ddd;
+  }
+
+  /* This is padding for the pages */
+  #content {
+    padding: 30px;
+  }
+
+  /* This is the nav bar */
+  #bar {
+    /* max-width: 1000px;
+    min-width: 500px; */
+    min-width: 500px;
+    background-color: #222831;
+    margin: 0 auto 0 auto;
+    border-right: 4px solid rgb(0, 0, 0);
+    border-left: 4px solid rgb(0, 0, 0);
+    border-top: 4px solid rgb(0, 0, 0);
+
+  }
+
+  /*OLD Burger menu button*/
+  /* .checkbtn {
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+   }
+   
+
+   #check:checked ~ .burgie{
+    display: block;
+   }
+
+   .burgie {
+    position: absolute;
+    top: 4.5rem;
+    left: 0;
+    background: #222831;
+    z-index: 1;
+    width: 200px;
+    display: none;
+   }
+   .burgie a {
+    color: #fff;
+    padding: 1rem 1.5rem;
+    display: block;
+   } */
+
+
+
+
+  /* This hightlights the links on the nav bar */
+  li a:hover {
+    background-color: #d6e5fc;
+  }
+
+  /* This changes the links on the nav bar when active */
+  li a:active {
+    background-color: #262626;
+  }
+
+  /* This is the white page under the nav bar on page one */
+  #Page {
+    /* position: absolute; */
+    display: flex;
+    justify-content: space-between;
+    /* Add space between the divs */
+    width: auto;
+    top: 5%;
+    min-height: 450px;
+    margin: 0 auto;
+    /* Center the container on the page */
+    margin-top: 5%;
+    border: 2px solid black;
+    /*Rounds corners of divs*/
+    border-radius: 25px;
+    padding: 5px;
+  }
+
+
+  #MFToDo {
+    flex: 1;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 25px;
+    border: 1px solid black;
+    background-color: #f0f0f0;
+  }
+
+  .dynitems {
+    /*organises the container for the contents*/
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    flex-direction: column;
+  }
+
+  .dynitems-wrapper {
+    margin-bottom: 5px;
+  }
+
+  .btn-add-input {
+    /*Style for add and remove buttons*/
+    background-color: rgb(131, 255, 127);
+    margin-right: 4px;
+    padding: 8px 12px;
+  }
+
+  .btn-del-input {
+    background-color: rgb(253, 23, 61);
+    padding: 8px 12px;
+  }
+
+
+  #TDItems {
+    width: 250px;
+    border: black;
+    border-radius: 25px;
+    /*Rounds corners of divs*/
+    margin-bottom: 50px;
+  }
+
+  #NutTrack {
+    padding: 20px;
+    /*Adds padding to inside div  between border and content*/
+    margin: 5px;
+    /* Does the space around the div container  */
+    width: 400px;
+    align-content: right;
+    border-radius: 25px;
+    /*Rounds corners of divs*/
+    border: 1px solid #333;
+    /* float: right; */
+  }

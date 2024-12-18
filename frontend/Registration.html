@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title> <!--This line here puts a name in the Tab bar-->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="StyleSheet" type="text/css" href="css/RegStyle.css">
+    <script defer src="js/RegScripts.js"></script>
+</head>
+
+<body>
+    <div class="video-background">
+        <iframe src="https://www.youtube.com/embed/HnoPHqrdXQ8?start=71&autoplay=1&mute=1&loop=1&playlist=HnoPHqrdXQ8"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+    <h1>Registration</h1>
+    <div class="reg-Container">
+        <form id="RegistrationForm">
+
+            <div>Input fields marked with * is mandatory</div>
+            <!-- //////////////////////////////////////////////////////////////////////////////////////-->
+
+            <div class="form-group">
+                <!-- <span class="help-block">Please enter your username Number</span> -->
+                <label class="col-md-4 control-label" for="mobile">Username: *</label>
+                <div class="col-md-4">
+                    <input id="username" name="username" type="text" placeholder="Username"
+                        class="form-control input-md" required="">
+                </div>
+            </div>
+
+            <!-- ////////////////////////////////////////////////////////////////////////////////////// -->
+
+            <!-- Text Input - password -->
+            <div class="form-group">
+                <!-- <span class="help-block">Please enter your password</span> -->
+                <label class="col-md-4 control-label" for="Password">Password: *</label>
+                <div class="col-md-4">
+                    <input id="password" type="password" name="password" type="text" placeholder="Password"
+                        class="form-control input-md" required="">
+                </div>
+            </div>
+            <!-- //////////////////////////////////////////////////////////////////////////////////////-->
+
+            <!-- Text Input - Mobile Number -->
+            <div class="form-group">
+                <!-- <span class="help-block">Please enter your Mobile Number</span> -->
+                <label class="col-md-4 control-label" for="mobile">Mobile number: *</label>
+                <div class="col-md-4">
+                    <input id="mobile" name="mobile" type="tel" placeholder="Mobile" class="form-control input-md"
+                        required="" oninput="validateNumberInput(event)">
+                </div>
+            </div>
+            <!-- ///////////////////////////////////////Address/////////////////////////////////////////////// -->
+            <!-- Text Input - Address Line 1 -->
+            <div class="form-group">
+                <!-- <span class="help-block">Please enter your Address Line 1</span> -->
+                <label class="col-md-4 control-label" for="address_line_1">Address Line 1: *</label>
+                <div class="col-md-4">
+                    <input id="address_line_1" name="address_line_1" type="text" placeholder="Address Line 1"
+                        class="form-control input-md" required="">
+                </div>
+            </div>
+            <!-- Text Input - Address Line 2 -->
+            <div class="form-group">
+                <!-- <span class="help-block">Please enter your Address Line 2</span> -->
+                <label class="col-md-4 control-label" for="address_line_2">Address Line 2:</label>
+                <div class="col-md-4">
+                    <input id="address_line_2" name="address_line_2" placeholder="Address Line 2"
+                        class="form-control input-md">
+                </div>
+            </div>
+            <!-- Text Input - county/city -->
+            <div class="form-group">
+                <!-- <span class="help-block">Please enter your County/City</span> -->
+                <label class="col-md-4 control-label" for="city_county">County/City: *</label>
+                <div class="col-md-4">
+                    <input id="city_county" name="city_county" type="text" placeholder="City/County"
+                        class="form-control input-md" required="">
+                </div>
+            </div>
+            <!-- Text Input - eircode -->
+            <div class="form-group">
+                <!-- <span class="help-block">Please enter your Eircode</span> -->
+                <label class="col-md-4 control-label" for="eircode">Eircode: *</label>
+                <div class="col-md-4">
+                    <input id="eircode" name="eircode" type="text" placeholder="Eircode" class="form-control input-md"
+                        required="">
+                </div>
+            </div>
+            <!-- //////////////////////////////SHIPPING/////////////////////////////////////////////// -->
+            <div class="form-group">
+                <label for="UserType" class="col-md-4 control-label">User Type:</label>
+                <div class="col-md-4">
+                    <select id="UserType" name="UserType" class="form-control input-md">
+                        <option value="Regular">Regular</option>
+                        <option value="GymOwner">Gym Owner</option>
+                        <option value="FoodProvider">Food Provider</option>
+                        <option value="PersonalTrainer">Personal Trainer</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Submit -->
+            <button type="submit">Submit Data</button>
+        </form>
+        <p id="responseMessage" class="response-message"></p>
+    </div>
+</body>
+
+</html>

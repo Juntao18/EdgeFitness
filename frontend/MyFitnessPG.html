@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFitness</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/mfpStyle.css">
+    <script defer src="js/mfpScripts.js"></script>
+</head>
+
+<body id="MFbody">
+    <header class="top-nav">
+        <a href="Home.html">
+            <nav style="height: 38px; position: fixed; left: 5%; top: 0.1%;">
+                <img src="images/logo.png" alt="HomeLogo" style="height: 50px;">
+            </nav>
+        </a>
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        <nav class="top-nav-links">
+            <a href="#" onclick="handleLogout()">Logout</a>
+        </nav>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="MyFitnessPG.html">Workouts</a></li>
+            <li><a href="gymList.html">Gyms</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="PrivateTrainer.html">Private Trainer</a></li>
+        </ul>
+    </aside>
+
+    <div id="content">
+        <div id="Page">
+            <div id="MFToDo">
+                <div>
+                    <h2>Workout Plan</h2>
+                    <form method="POST">
+                        <fieldset id="WorkOutform">
+                            <label for="workoutName">Workout Name:</label>
+                            <input type="text" id="workoutName" name="name" placeholder="Enter workout name" required />
+
+                            <!-- Comment Field -->
+                            <label for="workoutComment">Comment:</label>
+                            <textarea id="workoutComment" name="comment" placeholder="Enter a comment"></textarea>
+
+                            <div class="dynitems">
+                                <!--Dynamic item list-->
+                                <div class="dynitems-wrapper">
+                                    <input type="text" name="WKItem" placeholder="Add Exercise" class="input-field">
+                                    <select name="WKtag" class="input-select">
+                                        <option value="null">Please Select</option>
+                                        <option value="Chest">Chest</option>
+                                        <option value="Shoulders">Shoulders</option>
+                                        <option value="Back">Back</option>
+                                        <option value="Arms">Arms</option>
+                                        <option value="Legs">Legs</option>
+                                        <option value="Core">Core</option>
+                                    </select>
+                                    <input type="number" name="Areps" placeholder="Reps" min="0" max="99"
+                                        class="input-field">
+                                    <input type="number" name="Asets" placeholder="Sets" min="0" max="99"
+                                        class="input-field">
+                                    <button type="button" class="btn-add-input" id="addBtn">Add</button>
+                                </div>
+                            </div>
+                            <input type="button" id="submit" value="Log Workout">
+                        </fieldset>
+                    </form>
+                </div>
+                <div id="TDItems"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer></footer>
+
+</html>
